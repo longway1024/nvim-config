@@ -82,6 +82,7 @@ return {
             wk.register({
                 f = {name = "file"},
                 l = {name = "lsp"},
+                t = {name = "terminal"},
             },
             { prefix = "<leader>" })
         end,
@@ -100,7 +101,9 @@ return {
         "voldikss/vim-floaterm",
         cmd = "FloatermNew",
         keys = {
-            { "<leader>t", "<cmd>FloatermNew --height=0.8 --width=0.8<CR>", desc = "[T]erminal", mode = {"n", "v"}},
+            { "<leader>tn", "<cmd>FloatermNew --height=0.8 --width=0.8<CR>", desc = "[T]erminal [N]ew", mode = {"n", "v"}},
+            { "<leader>tt", "<cmd>FloatermToggle<CR>", desc = "[T]erminal [T]oggle", mode = {"n", "v"}},
+            { "<ESC>", "<C-\\><C-n>", desc = "terminal normal", mode = {"t"}},
             { "<leader>g", "<cmd>FloatermNew --height=0.9 --width=0.9 lazygit<CR>", desc = "Lazy[G]it", mode = {"n", "v"}},
         },
         config = function ()
