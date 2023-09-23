@@ -53,6 +53,10 @@ vim.keymap.set({"n", "v"}, "<C-s>", "<cmd>wa<CR>")
 vim.keymap.set("i", "<C-s>", "<ESC><cmd>wa<CR>a")
 vim.keymap.set({"n", "v"}, "<C-q>", "<cmd>wqall<CR>")
 vim.keymap.set({"n", "v"}, "<ESC>", "<cmd>noh<CR>")
+vim.keymap.set("i", "<c-b>", "<left>") --ctrl_h is used for backspace
+vim.keymap.set("i", "<c-j>", "<down>")
+vim.keymap.set("i", "<c-k>", "<up>")
+vim.keymap.set("i", "<c-l>", "<right>")
 
 -- Move to window using the <ctrl> hjkl keys
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to left window"})
